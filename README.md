@@ -4,7 +4,13 @@ SecureLens is a portfolio-grade, professional web security scanner and dashboard
 
 ---
 
-## Features
+## 📸 Screenshots
+
+![SecureLens Dashboard](./dashboard_preview.png)
+
+---
+
+## ⚡ Core Features
 
 1. **Passive URL Scanner**: Validates targets and requests headers without intrusive exploit payloads.
 2. **Security Header Analyzer**: Checks CSP, HSTS, X-Frame-Options, X-Content-Type-Options, and Referrer-Policy.
@@ -18,44 +24,11 @@ SecureLens is a portfolio-grade, professional web security scanner and dashboard
 
 ---
 
-## Technology Stack
-
-* **Backend**: FastAPI (Python 3.10+), Cryptography, ReportLab, HTTPX, Uvicorn
-* **Frontend**: React (Vite), Tailwind CSS, Framer Motion, Recharts, Lucide React Icons
-
----
-
-## Directory Structure
-
-```
-SecureLens/
-├── backend/
-│   ├── app/
-│   │   ├── __init__.py
-│   │   ├── main.py          # FastAPI server and routing
-│   │   ├── scanner.py       # Core audits and scoring engine
-│   │   └── pdf_report.py    # ReportLab document compiler
-│   ├── requirements.txt     # Python dependencies
-│   ├── run.py               # Fast backend startup wrapper
-│   └── test_scanner.py      # Automated terminal check script
-└── frontend/
-    ├── src/
-    │   ├── components/      # UI Dashboard cards, timeline, and grids
-    │   ├── App.jsx          # UI state coordinator
-    │   ├── index.css        # Cyberpunk style and animations
-    │   └── main.jsx
-    ├── package.json
-    ├── tailwind.config.js   # custom theme neons
-    └── vite.config.js
-```
-
----
-
-## Setup & Running Instructions
+## 🛠️ Setup & Running Instructions
 
 ### 1. Start the Backend (FastAPI)
 
-1. Open a terminal and navigate to the `backend` folder:
+1. Navigate to the `backend` folder:
    ```bash
    cd backend
    ```
@@ -63,6 +36,8 @@ SecureLens/
    * **Windows (PowerShell)**:
      ```powershell
      python -m venv venv
+     # If script execution is disabled on your system:
+     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
      .\venv\Scripts\Activate.ps1
      ```
    * **Linux / macOS**:
@@ -82,7 +57,7 @@ SecureLens/
 
 ### 2. Start the Frontend (Vite + React)
 
-1. Open a new terminal and navigate to the `frontend` folder:
+1. Navigate to the `frontend` folder:
    ```bash
    cd frontend
    ```
@@ -98,7 +73,18 @@ SecureLens/
 
 ---
 
-## Legal & Safety Disclaimer
+## 🚀 Future Roadmap
+
+* **Subdomain Enumeration**: Passive lookup of subdomains using public APIs and DNS records.
+* **Active Port Scanner**: Option to scan custom port ranges beyond standard bindings.
+* **Continuous Monitoring Cron**: Set up recurring schedule scans and trigger alert webhooks/emails.
+* **OAuth2 Authentication**: Allow multi-tenant user access to persist historical scans.
+* **Integrations**: Enforce deeper OSINT lookups using Shodan, Censys, and HaveIBeenPwned.
+* **Custom Remediation Recommendations**: Generate custom code fixes and instructions for specific header vulnerabilities.
+
+---
+
+## ⚖️ Legal & Safety Disclaimer
 
 > [!WARNING]
 > SecureLens is designed exclusively for educational, defensive, and authorized vulnerability assessments. It uses non-intrusive socket connections and HTTP headers analysis. No intrusive port scans, payloads, or exploit injections are carried out. Ensure you have authorization before performing scans.
