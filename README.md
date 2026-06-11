@@ -6,7 +6,8 @@ SecureLens is a portfolio-grade, professional web security scanner and dashboard
 
 ## 📸 Screenshots
 
-![SecureLens Dashboard](./dashboard_preview.png)
+![SecureLens Dashboard 1](./dashboard_1.png)
+![SecureLens Dashboard 2](./dashboard_2.png)
 
 ---
 
